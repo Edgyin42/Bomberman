@@ -2,10 +2,10 @@
 # pragma once
 
 # include <SFML/Graphics.hpp>
-# include "constant.hpp"
+#include "constant.hpp"
 # include <vector>
 # include <string>
-
+using namespace std;
 
 class Map{
     private: 
