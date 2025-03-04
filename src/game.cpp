@@ -1,4 +1,4 @@
-# include "game.hpp"
+#include "../include/game.hpp"
 Game::Game() :  window(sf::VideoMode({800, 480}), "Bomberman clone") {
     this->map = new Map(this->level);
     // Initialize game objects
@@ -40,5 +40,7 @@ void Game::render() {
             window.draw(*sp);
         }
     }
+
+    // cout << map->getBlock().size() << " " <<  map->getBlock()[0].size() << endl; 
     window.display();
 }

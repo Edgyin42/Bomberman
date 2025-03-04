@@ -72,60 +72,60 @@ include CMakeFiles/Bomberman.dir/flags.make
 CMakeFiles/Bomberman.dir/codegen:
 .PHONY : CMakeFiles/Bomberman.dir/codegen
 
-CMakeFiles/Bomberman.dir/main.cpp.o: CMakeFiles/Bomberman.dir/flags.make
-CMakeFiles/Bomberman.dir/main.cpp.o: /Users/trangnguyen/Desktop/bomberman/main.cpp
-CMakeFiles/Bomberman.dir/main.cpp.o: CMakeFiles/Bomberman.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/trangnguyen/Desktop/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Bomberman.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Bomberman.dir/main.cpp.o -MF CMakeFiles/Bomberman.dir/main.cpp.o.d -o CMakeFiles/Bomberman.dir/main.cpp.o -c /Users/trangnguyen/Desktop/bomberman/main.cpp
+CMakeFiles/Bomberman.dir/src/main.cpp.o: CMakeFiles/Bomberman.dir/flags.make
+CMakeFiles/Bomberman.dir/src/main.cpp.o: /Users/trangnguyen/Desktop/bomberman/src/main.cpp
+CMakeFiles/Bomberman.dir/src/main.cpp.o: CMakeFiles/Bomberman.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/trangnguyen/Desktop/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Bomberman.dir/src/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Bomberman.dir/src/main.cpp.o -MF CMakeFiles/Bomberman.dir/src/main.cpp.o.d -o CMakeFiles/Bomberman.dir/src/main.cpp.o -c /Users/trangnguyen/Desktop/bomberman/src/main.cpp
 
-CMakeFiles/Bomberman.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Bomberman.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trangnguyen/Desktop/bomberman/main.cpp > CMakeFiles/Bomberman.dir/main.cpp.i
+CMakeFiles/Bomberman.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Bomberman.dir/src/main.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trangnguyen/Desktop/bomberman/src/main.cpp > CMakeFiles/Bomberman.dir/src/main.cpp.i
 
-CMakeFiles/Bomberman.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Bomberman.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trangnguyen/Desktop/bomberman/main.cpp -o CMakeFiles/Bomberman.dir/main.cpp.s
+CMakeFiles/Bomberman.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Bomberman.dir/src/main.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trangnguyen/Desktop/bomberman/src/main.cpp -o CMakeFiles/Bomberman.dir/src/main.cpp.s
 
-CMakeFiles/Bomberman.dir/game.cpp.o: CMakeFiles/Bomberman.dir/flags.make
-CMakeFiles/Bomberman.dir/game.cpp.o: /Users/trangnguyen/Desktop/bomberman/game.cpp
-CMakeFiles/Bomberman.dir/game.cpp.o: CMakeFiles/Bomberman.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/trangnguyen/Desktop/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Bomberman.dir/game.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Bomberman.dir/game.cpp.o -MF CMakeFiles/Bomberman.dir/game.cpp.o.d -o CMakeFiles/Bomberman.dir/game.cpp.o -c /Users/trangnguyen/Desktop/bomberman/game.cpp
+CMakeFiles/Bomberman.dir/src/game.cpp.o: CMakeFiles/Bomberman.dir/flags.make
+CMakeFiles/Bomberman.dir/src/game.cpp.o: /Users/trangnguyen/Desktop/bomberman/src/game.cpp
+CMakeFiles/Bomberman.dir/src/game.cpp.o: CMakeFiles/Bomberman.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/trangnguyen/Desktop/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Bomberman.dir/src/game.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Bomberman.dir/src/game.cpp.o -MF CMakeFiles/Bomberman.dir/src/game.cpp.o.d -o CMakeFiles/Bomberman.dir/src/game.cpp.o -c /Users/trangnguyen/Desktop/bomberman/src/game.cpp
 
-CMakeFiles/Bomberman.dir/game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Bomberman.dir/game.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trangnguyen/Desktop/bomberman/game.cpp > CMakeFiles/Bomberman.dir/game.cpp.i
+CMakeFiles/Bomberman.dir/src/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Bomberman.dir/src/game.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trangnguyen/Desktop/bomberman/src/game.cpp > CMakeFiles/Bomberman.dir/src/game.cpp.i
 
-CMakeFiles/Bomberman.dir/game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Bomberman.dir/game.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trangnguyen/Desktop/bomberman/game.cpp -o CMakeFiles/Bomberman.dir/game.cpp.s
+CMakeFiles/Bomberman.dir/src/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Bomberman.dir/src/game.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trangnguyen/Desktop/bomberman/src/game.cpp -o CMakeFiles/Bomberman.dir/src/game.cpp.s
 
-CMakeFiles/Bomberman.dir/map.cpp.o: CMakeFiles/Bomberman.dir/flags.make
-CMakeFiles/Bomberman.dir/map.cpp.o: /Users/trangnguyen/Desktop/bomberman/map.cpp
-CMakeFiles/Bomberman.dir/map.cpp.o: CMakeFiles/Bomberman.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/trangnguyen/Desktop/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Bomberman.dir/map.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Bomberman.dir/map.cpp.o -MF CMakeFiles/Bomberman.dir/map.cpp.o.d -o CMakeFiles/Bomberman.dir/map.cpp.o -c /Users/trangnguyen/Desktop/bomberman/map.cpp
+CMakeFiles/Bomberman.dir/src/map.cpp.o: CMakeFiles/Bomberman.dir/flags.make
+CMakeFiles/Bomberman.dir/src/map.cpp.o: /Users/trangnguyen/Desktop/bomberman/src/map.cpp
+CMakeFiles/Bomberman.dir/src/map.cpp.o: CMakeFiles/Bomberman.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/trangnguyen/Desktop/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Bomberman.dir/src/map.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Bomberman.dir/src/map.cpp.o -MF CMakeFiles/Bomberman.dir/src/map.cpp.o.d -o CMakeFiles/Bomberman.dir/src/map.cpp.o -c /Users/trangnguyen/Desktop/bomberman/src/map.cpp
 
-CMakeFiles/Bomberman.dir/map.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Bomberman.dir/map.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trangnguyen/Desktop/bomberman/map.cpp > CMakeFiles/Bomberman.dir/map.cpp.i
+CMakeFiles/Bomberman.dir/src/map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Bomberman.dir/src/map.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trangnguyen/Desktop/bomberman/src/map.cpp > CMakeFiles/Bomberman.dir/src/map.cpp.i
 
-CMakeFiles/Bomberman.dir/map.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Bomberman.dir/map.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trangnguyen/Desktop/bomberman/map.cpp -o CMakeFiles/Bomberman.dir/map.cpp.s
+CMakeFiles/Bomberman.dir/src/map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Bomberman.dir/src/map.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trangnguyen/Desktop/bomberman/src/map.cpp -o CMakeFiles/Bomberman.dir/src/map.cpp.s
 
 # Object files for target Bomberman
 Bomberman_OBJECTS = \
-"CMakeFiles/Bomberman.dir/main.cpp.o" \
-"CMakeFiles/Bomberman.dir/game.cpp.o" \
-"CMakeFiles/Bomberman.dir/map.cpp.o"
+"CMakeFiles/Bomberman.dir/src/main.cpp.o" \
+"CMakeFiles/Bomberman.dir/src/game.cpp.o" \
+"CMakeFiles/Bomberman.dir/src/map.cpp.o"
 
 # External object files for target Bomberman
 Bomberman_EXTERNAL_OBJECTS =
 
-Bomberman: CMakeFiles/Bomberman.dir/main.cpp.o
-Bomberman: CMakeFiles/Bomberman.dir/game.cpp.o
-Bomberman: CMakeFiles/Bomberman.dir/map.cpp.o
+Bomberman: CMakeFiles/Bomberman.dir/src/main.cpp.o
+Bomberman: CMakeFiles/Bomberman.dir/src/game.cpp.o
+Bomberman: CMakeFiles/Bomberman.dir/src/map.cpp.o
 Bomberman: CMakeFiles/Bomberman.dir/build.make
 Bomberman: /opt/homebrew/lib/libsfml-graphics.3.0.0.dylib
 Bomberman: /opt/homebrew/lib/libsfml-audio.3.0.0.dylib

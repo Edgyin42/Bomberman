@@ -1,4 +1,4 @@
-# include "map.hpp"
+#include "../include/map.hpp"
 #include <sstream>   
 #include <fstream>   
 #include <stdexcept> 
@@ -6,7 +6,7 @@
 using namespace std; 
 
 Map::Map() : level(1), blocks(MAP_HEIGHT) {
-  if (!texture.loadFromFile("./res/textures/classic.png")){
+  if (!texture.loadFromFile("/Users/trangnguyen/Desktop/bomberman/res/textures/classic.png")){
     throw std::runtime_error ("Failed to load file classic.png");
   }
   matchTheBlock(this->level);
@@ -14,13 +14,18 @@ Map::Map() : level(1), blocks(MAP_HEIGHT) {
 
 // Parameterized Constructor (takes an int _level)
 Map::Map(int _level) : level(_level), blocks(MAP_HEIGHT) {
+  if (!texture.loadFromFile("/Users/trangnguyen/Desktop/bomberman/res/textures/classic.png")){
+    throw std::runtime_error ("Failed to load file classic.png");
+  }
   matchTheBlock(this->level);
 }
 
 void Map::matchTheBlock(int levelNumber){
   try {
       std::stringstream filenameStream;
-      filenameStream << "./res/Map/Level" << levelNumber << ".txt";
+      
+      filenameStream << "../res/Map/Level" << levelNumber << ".txt";
+      // filenameStream << "./Level1.txt";
       std::string filename = filenameStream.str();
 
       std::ifstream file(filename);
@@ -34,12 +39,6 @@ void Map::matchTheBlock(int levelNumber){
       std::getline(file, line);
       std::string token;
       std::istringstream iss(line);
-
-
-      sf::Texture texture; // Load texture ONCE, outside the loops
-      if (!texture.loadFromFile("./res/textures/classic.png")){
-          throw std::runtime_error ("Failed to load file classic.png");
-      }
 
 
       for (int i = 0; i < MAP_HEIGHT; i++) {
@@ -67,11 +66,15 @@ void Map::matchTheBlock(int levelNumber){
               type = blockType::grass;
               break;
             }
-          }
-          sf::Sprite *sprite= new sf::Sprite(this->texture);
-          sprite->setTextureRect(sf::IntRect({blockTypeData[type][0], blockTypeData[type][1]}, {BLOCK_WIDTH, BLOCK_WIDTH}));
-          sprite->setPosition(sf::Vector2f(32.f*i, 32.f*j));
-          blocks[i].push_back(sprite);
+          } 
+          sf::Sprite *sprite = new sf::Sprite(this->texture);
+          sf::IntRect rect({BLOCK_WIDTH*blockTypeData.at(type)[0], BLOCK_WIDTH*blockTypeData.at(type)[1]}, {BLOCK_WIDTH, BLOCK_WIDTH}); 
+          //cout << rect[0][0] << " " << rect[0][1] << " " << rect[1][0] << " " << rect[1][1];
+          sprite->setTextureRect(rect);
+          sprite->setPosition(sf::Vector2f(32*j, 32*i));
+          sprite->setScale({2.5, 2.5});
+          this->blocks[i].push_back(sprite);
+          //cout << *sprite << " "; 
         }
       }
   } catch (const std::exception& e) {

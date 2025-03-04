@@ -129,77 +129,77 @@ Bomberman/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/build
 .PHONY : Bomberman/fast
 
-game.o: game.cpp.o
-.PHONY : game.o
+src/game.o: src/game.cpp.o
+.PHONY : src/game.o
 
 # target to build an object file
-game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/game.cpp.o
-.PHONY : game.cpp.o
+src/game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/game.cpp.o
+.PHONY : src/game.cpp.o
 
-game.i: game.cpp.i
-.PHONY : game.i
+src/game.i: src/game.cpp.i
+.PHONY : src/game.i
 
 # target to preprocess a source file
-game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/game.cpp.i
-.PHONY : game.cpp.i
+src/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/game.cpp.i
+.PHONY : src/game.cpp.i
 
-game.s: game.cpp.s
-.PHONY : game.s
+src/game.s: src/game.cpp.s
+.PHONY : src/game.s
 
 # target to generate assembly for a file
-game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/game.cpp.s
-.PHONY : game.cpp.s
+src/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/game.cpp.s
+.PHONY : src/game.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-map.o: map.cpp.o
-.PHONY : map.o
+src/map.o: src/map.cpp.o
+.PHONY : src/map.o
 
 # target to build an object file
-map.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/map.cpp.o
-.PHONY : map.cpp.o
+src/map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/map.cpp.o
+.PHONY : src/map.cpp.o
 
-map.i: map.cpp.i
-.PHONY : map.i
+src/map.i: src/map.cpp.i
+.PHONY : src/map.i
 
 # target to preprocess a source file
-map.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/map.cpp.i
-.PHONY : map.cpp.i
+src/map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/map.cpp.i
+.PHONY : src/map.cpp.i
 
-map.s: map.cpp.s
-.PHONY : map.s
+src/map.s: src/map.cpp.s
+.PHONY : src/map.s
 
 # target to generate assembly for a file
-map.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/map.cpp.s
-.PHONY : map.cpp.s
+src/map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/map.cpp.s
+.PHONY : src/map.cpp.s
 
 # Help Target
 help:
@@ -210,15 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Bomberman"
-	@echo "... game.o"
-	@echo "... game.i"
-	@echo "... game.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... map.o"
-	@echo "... map.i"
-	@echo "... map.s"
+	@echo "... src/game.o"
+	@echo "... src/game.i"
+	@echo "... src/game.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/map.o"
+	@echo "... src/map.i"
+	@echo "... src/map.s"
 .PHONY : help
 
 

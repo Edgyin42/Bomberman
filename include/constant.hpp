@@ -6,7 +6,7 @@ using namespace std;
 
 const int MAP_WIDTH = 25; 
 const int MAP_HEIGHT = 15; 
-const int BLOCK_WIDTH = 32;
+const int BLOCK_WIDTH = 16; // On the spritesheet
 
 enum blockType{
     portal,
@@ -15,7 +15,7 @@ enum blockType{
     grass, 
 }; 
 
-std::map<blockType, std::vector<int>> blockTypeData = {
+const std::map<blockType, std::vector<int>> blockTypeData = {
     {blockType::portal, {4, 0}},
     {blockType::wall,   {5, 0}},
     {blockType::grass,  {6, 0}},

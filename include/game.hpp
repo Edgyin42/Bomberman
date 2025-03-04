@@ -1,5 +1,5 @@
-# include "map.hpp"
 #pragma once
+#include "map.hpp"
 
 
 class Game {
@@ -10,7 +10,7 @@ class Game {
     
     private:
         int level = 1;
-        Map *map;  
+        Map *map;   
         void processEvents();
         void update(sf::Time deltaTime);
         void render();
