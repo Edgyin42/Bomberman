@@ -46,6 +46,9 @@
         "__tree": "cpp",
         "type_traits": "cpp",
         "optional": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "__node_handle": "cpp"
     }
 }

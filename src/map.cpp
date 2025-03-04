@@ -9,6 +9,7 @@ Map::Map() : level(1), blocks(MAP_HEIGHT) {
   if (!texture.loadFromFile("/Users/trangnguyen/Desktop/bomberman/res/textures/classic.png")){
     throw std::runtime_error ("Failed to load file classic.png");
   }
+  addMonster();
   matchTheBlock(this->level);
 }
 
@@ -17,6 +18,7 @@ Map::Map(int _level) : level(_level), blocks(MAP_HEIGHT) {
   if (!texture.loadFromFile("/Users/trangnguyen/Desktop/bomberman/res/textures/classic.png")){
     throw std::runtime_error ("Failed to load file classic.png");
   }
+  addMonster();
   matchTheBlock(this->level);
 }
 
@@ -56,10 +58,14 @@ void Map::matchTheBlock(int levelNumber){
             }
             case 2: {
               type = blockType::wall;
+              blockX.insert(32*j);
+              blockY.insert(32*i);
               break;
             }
             case 3: {
               type = blockType::brick;
+              blockX.insert(32*j);
+              blockY.insert(32*i);
               break;
             }
             default: {
@@ -85,3 +91,15 @@ void Map::matchTheBlock(int levelNumber){
 vector<vector<sf::Sprite*>> Map::getBlock(){
   return this->blocks;
 };
+
+
+vector<Character*> Map::getMonsters (){
+  return this->monsters;
+};
+
+void Map::addMonster(){
+  Character *character = new Oneal(this, 32., 32.);
+  this->monsters.push_back(character);
+}
+
+Map::~Map(){}; 

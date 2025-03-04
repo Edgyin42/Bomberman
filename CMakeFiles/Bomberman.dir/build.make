@@ -100,10 +100,24 @@ CMakeFiles/Bomberman.dir/src/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Bomberman.dir/src/game.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trangnguyen/Desktop/bomberman/src/game.cpp -o CMakeFiles/Bomberman.dir/src/game.cpp.s
 
+CMakeFiles/Bomberman.dir/src/character.cpp.o: CMakeFiles/Bomberman.dir/flags.make
+CMakeFiles/Bomberman.dir/src/character.cpp.o: src/character.cpp
+CMakeFiles/Bomberman.dir/src/character.cpp.o: CMakeFiles/Bomberman.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/trangnguyen/Desktop/bomberman/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Bomberman.dir/src/character.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Bomberman.dir/src/character.cpp.o -MF CMakeFiles/Bomberman.dir/src/character.cpp.o.d -o CMakeFiles/Bomberman.dir/src/character.cpp.o -c /Users/trangnguyen/Desktop/bomberman/src/character.cpp
+
+CMakeFiles/Bomberman.dir/src/character.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Bomberman.dir/src/character.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trangnguyen/Desktop/bomberman/src/character.cpp > CMakeFiles/Bomberman.dir/src/character.cpp.i
+
+CMakeFiles/Bomberman.dir/src/character.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Bomberman.dir/src/character.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trangnguyen/Desktop/bomberman/src/character.cpp -o CMakeFiles/Bomberman.dir/src/character.cpp.s
+
 CMakeFiles/Bomberman.dir/src/map.cpp.o: CMakeFiles/Bomberman.dir/flags.make
 CMakeFiles/Bomberman.dir/src/map.cpp.o: src/map.cpp
 CMakeFiles/Bomberman.dir/src/map.cpp.o: CMakeFiles/Bomberman.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/trangnguyen/Desktop/bomberman/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Bomberman.dir/src/map.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/trangnguyen/Desktop/bomberman/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Bomberman.dir/src/map.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Bomberman.dir/src/map.cpp.o -MF CMakeFiles/Bomberman.dir/src/map.cpp.o.d -o CMakeFiles/Bomberman.dir/src/map.cpp.o -c /Users/trangnguyen/Desktop/bomberman/src/map.cpp
 
 CMakeFiles/Bomberman.dir/src/map.cpp.i: cmake_force
@@ -114,18 +128,52 @@ CMakeFiles/Bomberman.dir/src/map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Bomberman.dir/src/map.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trangnguyen/Desktop/bomberman/src/map.cpp -o CMakeFiles/Bomberman.dir/src/map.cpp.s
 
+CMakeFiles/Bomberman.dir/src/Oneal.cpp.o: CMakeFiles/Bomberman.dir/flags.make
+CMakeFiles/Bomberman.dir/src/Oneal.cpp.o: src/Oneal.cpp
+CMakeFiles/Bomberman.dir/src/Oneal.cpp.o: CMakeFiles/Bomberman.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/trangnguyen/Desktop/bomberman/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Bomberman.dir/src/Oneal.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Bomberman.dir/src/Oneal.cpp.o -MF CMakeFiles/Bomberman.dir/src/Oneal.cpp.o.d -o CMakeFiles/Bomberman.dir/src/Oneal.cpp.o -c /Users/trangnguyen/Desktop/bomberman/src/Oneal.cpp
+
+CMakeFiles/Bomberman.dir/src/Oneal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Bomberman.dir/src/Oneal.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trangnguyen/Desktop/bomberman/src/Oneal.cpp > CMakeFiles/Bomberman.dir/src/Oneal.cpp.i
+
+CMakeFiles/Bomberman.dir/src/Oneal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Bomberman.dir/src/Oneal.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trangnguyen/Desktop/bomberman/src/Oneal.cpp -o CMakeFiles/Bomberman.dir/src/Oneal.cpp.s
+
+CMakeFiles/Bomberman.dir/src/player.cpp.o: CMakeFiles/Bomberman.dir/flags.make
+CMakeFiles/Bomberman.dir/src/player.cpp.o: src/player.cpp
+CMakeFiles/Bomberman.dir/src/player.cpp.o: CMakeFiles/Bomberman.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/trangnguyen/Desktop/bomberman/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Bomberman.dir/src/player.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Bomberman.dir/src/player.cpp.o -MF CMakeFiles/Bomberman.dir/src/player.cpp.o.d -o CMakeFiles/Bomberman.dir/src/player.cpp.o -c /Users/trangnguyen/Desktop/bomberman/src/player.cpp
+
+CMakeFiles/Bomberman.dir/src/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Bomberman.dir/src/player.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trangnguyen/Desktop/bomberman/src/player.cpp > CMakeFiles/Bomberman.dir/src/player.cpp.i
+
+CMakeFiles/Bomberman.dir/src/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Bomberman.dir/src/player.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trangnguyen/Desktop/bomberman/src/player.cpp -o CMakeFiles/Bomberman.dir/src/player.cpp.s
+
 # Object files for target Bomberman
 Bomberman_OBJECTS = \
 "CMakeFiles/Bomberman.dir/src/main.cpp.o" \
 "CMakeFiles/Bomberman.dir/src/game.cpp.o" \
-"CMakeFiles/Bomberman.dir/src/map.cpp.o"
+"CMakeFiles/Bomberman.dir/src/character.cpp.o" \
+"CMakeFiles/Bomberman.dir/src/map.cpp.o" \
+"CMakeFiles/Bomberman.dir/src/Oneal.cpp.o" \
+"CMakeFiles/Bomberman.dir/src/player.cpp.o"
 
 # External object files for target Bomberman
 Bomberman_EXTERNAL_OBJECTS =
 
 Bomberman: CMakeFiles/Bomberman.dir/src/main.cpp.o
 Bomberman: CMakeFiles/Bomberman.dir/src/game.cpp.o
+Bomberman: CMakeFiles/Bomberman.dir/src/character.cpp.o
 Bomberman: CMakeFiles/Bomberman.dir/src/map.cpp.o
+Bomberman: CMakeFiles/Bomberman.dir/src/Oneal.cpp.o
+Bomberman: CMakeFiles/Bomberman.dir/src/player.cpp.o
 Bomberman: CMakeFiles/Bomberman.dir/build.make
 Bomberman: /opt/homebrew/lib/libsfml-graphics.3.0.0.dylib
 Bomberman: /opt/homebrew/lib/libsfml-audio.3.0.0.dylib
@@ -133,7 +181,7 @@ Bomberman: /opt/homebrew/lib/libsfml-network.3.0.0.dylib
 Bomberman: /opt/homebrew/lib/libsfml-window.3.0.0.dylib
 Bomberman: /opt/homebrew/lib/libsfml-system.3.0.0.dylib
 Bomberman: CMakeFiles/Bomberman.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/trangnguyen/Desktop/bomberman/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Bomberman"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/trangnguyen/Desktop/bomberman/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Bomberman"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Bomberman.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

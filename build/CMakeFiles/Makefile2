@@ -85,12 +85,12 @@ clean: CMakeFiles/Bomberman.dir/clean
 CMakeFiles/Bomberman.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/trangnguyen/Desktop/bomberman/build/CMakeFiles --progress-num=1,2,3,4 "Built target Bomberman"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/trangnguyen/Desktop/bomberman/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Bomberman"
 .PHONY : CMakeFiles/Bomberman.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Bomberman.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/trangnguyen/Desktop/bomberman/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/trangnguyen/Desktop/bomberman/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Bomberman.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/trangnguyen/Desktop/bomberman/build/CMakeFiles 0
 .PHONY : CMakeFiles/Bomberman.dir/rule
@@ -102,7 +102,7 @@ Bomberman: CMakeFiles/Bomberman.dir/rule
 # codegen rule for target.
 CMakeFiles/Bomberman.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/trangnguyen/Desktop/bomberman/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target Bomberman"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/trangnguyen/Desktop/bomberman/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Finished codegen for target Bomberman"
 .PHONY : CMakeFiles/Bomberman.dir/codegen
 
 # clean rule for target.

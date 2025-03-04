@@ -34,13 +34,13 @@ void Game::update(sf::Time deltaTime) {
 
 void Game::render() {
     window.clear();
-    // Draw game objects (Map, Player, Bombs, etc.)
     for (auto rows: map->getBlock()) {
         for (sf::Sprite *sp: rows){
             window.draw(*sp);
         }
     }
-
-    // cout << map->getBlock().size() << " " <<  map->getBlock()[0].size() << endl; 
+    for (auto monster: map->getMonsters()){
+        window.draw(*monster->getSprite());
+    }
     window.display();
 }

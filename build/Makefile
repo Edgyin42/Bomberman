@@ -129,6 +129,54 @@ Bomberman/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/build
 .PHONY : Bomberman/fast
 
+src/Oneal.o: src/Oneal.cpp.o
+.PHONY : src/Oneal.o
+
+# target to build an object file
+src/Oneal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/Oneal.cpp.o
+.PHONY : src/Oneal.cpp.o
+
+src/Oneal.i: src/Oneal.cpp.i
+.PHONY : src/Oneal.i
+
+# target to preprocess a source file
+src/Oneal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/Oneal.cpp.i
+.PHONY : src/Oneal.cpp.i
+
+src/Oneal.s: src/Oneal.cpp.s
+.PHONY : src/Oneal.s
+
+# target to generate assembly for a file
+src/Oneal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/Oneal.cpp.s
+.PHONY : src/Oneal.cpp.s
+
+src/character.o: src/character.cpp.o
+.PHONY : src/character.o
+
+# target to build an object file
+src/character.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/character.cpp.o
+.PHONY : src/character.cpp.o
+
+src/character.i: src/character.cpp.i
+.PHONY : src/character.i
+
+# target to preprocess a source file
+src/character.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/character.cpp.i
+.PHONY : src/character.cpp.i
+
+src/character.s: src/character.cpp.s
+.PHONY : src/character.s
+
+# target to generate assembly for a file
+src/character.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/character.cpp.s
+.PHONY : src/character.cpp.s
+
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
@@ -201,6 +249,30 @@ src/map.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/map.cpp.s
 .PHONY : src/map.cpp.s
 
+src/player.o: src/player.cpp.o
+.PHONY : src/player.o
+
+# target to build an object file
+src/player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/player.cpp.o
+.PHONY : src/player.cpp.o
+
+src/player.i: src/player.cpp.i
+.PHONY : src/player.i
+
+# target to preprocess a source file
+src/player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/player.cpp.i
+.PHONY : src/player.cpp.i
+
+src/player.s: src/player.cpp.s
+.PHONY : src/player.s
+
+# target to generate assembly for a file
+src/player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Bomberman.dir/build.make CMakeFiles/Bomberman.dir/src/player.cpp.s
+.PHONY : src/player.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,6 +282,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Bomberman"
+	@echo "... src/Oneal.o"
+	@echo "... src/Oneal.i"
+	@echo "... src/Oneal.s"
+	@echo "... src/character.o"
+	@echo "... src/character.i"
+	@echo "... src/character.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
@@ -219,6 +297,9 @@ help:
 	@echo "... src/map.o"
 	@echo "... src/map.i"
 	@echo "... src/map.s"
+	@echo "... src/player.o"
+	@echo "... src/player.i"
+	@echo "... src/player.s"
 .PHONY : help
 
 

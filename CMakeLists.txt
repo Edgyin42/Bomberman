@@ -11,7 +11,10 @@ find_package(SFML 3 REQUIRED COMPONENTS Graphics Audio Network)  # Correct versi
 add_executable(Bomberman
     src/main.cpp
     src/game.cpp
+    src/character.cpp
     src/map.cpp
+    src/Oneal.cpp
+    src/player.cpp
 )
 
 # Link using imported targets (best practice)
