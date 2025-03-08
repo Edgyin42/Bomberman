@@ -4,6 +4,15 @@ using namespace std;
 int main(){
     
    Game a;
+   // for (auto x = a.getMap()->hiddenBlock.begin(); x!= a.getMap()->hiddenBlock.end(); x++ ){
+   //    cout << (*x)->position.x << " " << (*x)->position.y << endl;
+   // } 
+   // for (auto i: a.getMap()->grid){
+   //    for (int h: i){
+   //       cout << h << " "; 
+   //    }
+   //    cout << endl;
+   // }
    a.run();
 }
 

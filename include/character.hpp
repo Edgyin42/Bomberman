@@ -36,11 +36,15 @@ class Character{
         void moveLeft();
         void moveRight();
 
-        
-        // virtual void move() = 0;
+        virtual void move(){};
+
+
+        virtual void swapUp() = 0; 
+        virtual void swapDown(){}; 
+        virtual void swapLeft(){}; 
+        virtual void swapRight(){}; 
         // //Animal(float swap, std::string direction, float count);
         // void setSwap(float swap);
-        // float getSwap();
         // // Setter and getter for the movement direction
         // void setDirection(std::string direction);
         // std::string getDirection();

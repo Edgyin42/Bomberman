@@ -3,7 +3,7 @@
 
 # include <SFML/Graphics.hpp>
 #include "constant.hpp"
-#include "Oneal.hpp"
+#include "character.hpp"
 # include <unordered_set>
 # include <string>
 using namespace std;
@@ -18,6 +18,8 @@ class Map{
     vector<vector<sf::Sprite *> > blocks;
     vector<Character*> monsters;
     
+    Character *mainPlayer;
+    
     
     public: 
     Map(); 
@@ -25,10 +27,9 @@ class Map{
     void matchTheBlock(int level); 
     vector<vector<sf::Sprite*>> getBlock();
     vector<Character*> getMonsters();
-
-
-    unordered_set<int> blockX; // All the X position of walls
-    unordered_set<int> blockY; // All the Y position of walls
+    vector<vector<int> > grid;
+    Character *getPlayer();
+    unordered_set<sf::IntRect*> hiddenBlock; 
     void addMonster();
     ~Map(); 
 };

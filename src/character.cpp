@@ -53,42 +53,63 @@ void Character::setPosition(sf::Vector2<float> pos){
 }
 
 bool Character::canMoveUp(){
-    if (this->map->blockX.find(this->position.x + this->speed) == this->map->blockX.end()) return true; 
+    int block_x = floor(position.x / 32);
+    int block_y = floor(position.y / 32) - 1;
+    cout << "block " << block_y << " " << block_x << endl; 
+    if (this->map->grid[block_y][block_x] == 0) return true; 
     return false;
 };
 
 bool Character::canMoveDown(){
-    if (this->map->blockX.find(this->position.x - this->speed) == this->map->blockX.end()) return true; 
+    
+    int block_x = floor(position.x / 32);
+    int block_y = floor((position.y + 32) / 32);;
+    cout << "block " << block_y << " " << block_x << endl; 
+    if (this->map->grid[block_y][block_x] == 0) return true; 
     return false;
 };
 
 bool Character::canMoveLeft(){
-    if (this->map->blockY.find(this->position.y + this->speed) == this->map->blockY.end()) return true; 
+    cout << "position " << position.y << " " << position.x << endl; 
+    int block_x = floor(position.x / 32) - 1;
+    int block_y = floor(position.y / 32);
+    cout << "block " << block_y << " " << block_x << endl; 
+    if (this->map->grid[block_y][block_x] == 0) return true; 
     return false;
 };
 
 bool Character::canMoveRight(){
-    if (this->map->blockY.find(this->position.y - this->speed) == this->map->blockY.end()) return true; 
+    int block_x = ceil(position.x / 32) + 1;
+    int block_y = floor(position.y / 32);
+    cout << "block " << block_y << " " << block_x << endl; 
+    if (this->map->grid[block_y][block_x] == 0) return true; 
     return false;
 };
 
 
 void Character::moveUP(){
-    if (canMoveUp()) position.x + speed;
+    position.y -= speed;
+    swapUp();
     sprite->setPosition(position);
 }
 
 void Character::moveDown(){
-    if (canMoveDown()) position.x - speed;
+    position.y += speed;
+    swapDown();
     sprite->setPosition(position);
 }
 
 void Character::moveLeft(){
-    if (canMoveLeft()) position.y + speed;
+    position.x -= speed;
+    swapLeft();
     sprite->setPosition(position);
 }
 
 void Character::moveRight(){
-    if (canMoveRight()) position.y - speed;
+    position.x += speed;
+    swapRight();
     sprite->setPosition(position);
 }
+
+
+

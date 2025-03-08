@@ -1,23 +1,28 @@
 #include "../include/map.hpp"
+#include "../include/Oneal.hpp"
+#include "../include/player.hpp"
 #include <sstream>   
 #include <fstream>   
 #include <stdexcept> 
 #include <iostream> 
 using namespace std; 
 
-Map::Map() : level(1), blocks(MAP_HEIGHT) {
+Map::Map() : level(1), blocks(MAP_HEIGHT), mainPlayer(new Player(this, 32, 32)) {
   if (!texture.loadFromFile("/Users/trangnguyen/Desktop/bomberman/res/textures/classic.png")){
     throw std::runtime_error ("Failed to load file classic.png");
   }
+  grid = vector<vector<int>>(MAP_HEIGHT, vector<int>(MAP_WIDTH));
+
   addMonster();
   matchTheBlock(this->level);
 }
 
 // Parameterized Constructor (takes an int _level)
-Map::Map(int _level) : level(_level), blocks(MAP_HEIGHT) {
+Map::Map(int _level) : level(_level), blocks(MAP_HEIGHT), mainPlayer(new Player(this, 32, 32)) {
   if (!texture.loadFromFile("/Users/trangnguyen/Desktop/bomberman/res/textures/classic.png")){
     throw std::runtime_error ("Failed to load file classic.png");
   }
+  grid = vector<vector<int>>(MAP_HEIGHT, vector<int>(MAP_WIDTH));
   addMonster();
   matchTheBlock(this->level);
 }
@@ -58,14 +63,15 @@ void Map::matchTheBlock(int levelNumber){
             }
             case 2: {
               type = blockType::wall;
-              blockX.insert(32*j);
-              blockY.insert(32*i);
+              // Do I need to change it to float?
+              sf::IntRect* blockWall = new sf::IntRect({32*j, 32*i}, {BLOCK_WIDTH, BLOCK_WIDTH});
+              hiddenBlock.insert(blockWall);
               break;
             }
             case 3: {
               type = blockType::brick;
-              blockX.insert(32*j);
-              blockY.insert(32*i);
+              sf::IntRect* blockWall = new sf::IntRect({32*j, 32*i}, {BLOCK_WIDTH, BLOCK_WIDTH});
+              hiddenBlock.insert(blockWall);
               break;
             }
             default: {
@@ -78,9 +84,9 @@ void Map::matchTheBlock(int levelNumber){
           //cout << rect[0][0] << " " << rect[0][1] << " " << rect[1][0] << " " << rect[1][1];
           sprite->setTextureRect(rect);
           sprite->setPosition(sf::Vector2f(32*j, 32*i));
-          sprite->setScale({2.5, 2.5});
+          sprite->setScale({2, 2});
           this->blocks[i].push_back(sprite);
-          //cout << *sprite << " "; 
+          grid[i][j] = b;
         }
       }
   } catch (const std::exception& e) {
@@ -98,8 +104,12 @@ vector<Character*> Map::getMonsters (){
 };
 
 void Map::addMonster(){
-  Character *character = new Oneal(this, 32., 32.);
+Character *character = new Oneal(this, 32., 32., OnealType::OnealHorizontal, 1.);
   this->monsters.push_back(character);
 }
+
+Character* Map::getPlayer(){
+  return this->mainPlayer;
+};
 
 Map::~Map(){}; 

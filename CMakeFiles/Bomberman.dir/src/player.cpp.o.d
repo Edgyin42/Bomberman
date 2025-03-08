@@ -1,6 +1,6 @@
-CMakeFiles/Bomberman.dir/src/Oneal.cpp.o: \
-  /Users/trangnguyen/Desktop/bomberman/src/Oneal.cpp \
-  /Users/trangnguyen/Desktop/bomberman/src/../include/Oneal.hpp \
+CMakeFiles/Bomberman.dir/src/player.cpp.o: \
+  /Users/trangnguyen/Desktop/bomberman/src/player.cpp \
+  /Users/trangnguyen/Desktop/bomberman/src/../include/player.hpp \
   /Users/trangnguyen/Desktop/bomberman/src/../include/character.hpp \
   /Users/trangnguyen/Desktop/bomberman/src/../include/constant.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/map \

@@ -11,25 +11,58 @@ Game::Game(int _level) :  window(sf::VideoMode({800, 480}), "Bomberman clone") {
 }
 
 void Game::run() {
+    sf::Time timePerFrame = sf::seconds(1.f / 13.f);
     sf::Clock clock;
+    sf::Time timeSinceLastUpdate = sf::Time::Zero;
     while (window.isOpen()) {
-        sf::Time deltaTime = clock.restart();
         processEvents();
-        update(deltaTime);
-        render();
+        timeSinceLastUpdate += clock.restart();
+        while (timeSinceLastUpdate > timePerFrame) {
+            timeSinceLastUpdate -= timePerFrame;
+            render();
+            update();
+            processEvents();
+        }
     }
 }
 
 void Game::processEvents() {
 
     while (const std::optional event = window.pollEvent()) {
-        if (event->is<sf::Event::Closed>())
+        if (event) {
+            if (event->is<sf::Event::Closed>()) {
                 window.close();
+            }
+        }
     }
+    //The events in the while loop above, are checked for every loop.
+    //Key presses, on the contrary, can be checked at any moment, regadless of the window state.
+    //  THIS DOESN"T WORK 
+    
 }
 
-void Game::update(sf::Time deltaTime) {
+void Game::update() {
     // Update game objects (Player, Bombs, Enemies, etc.)
+    for (auto monster: map->getMonsters()){
+        monster->move();
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
+    { 
+        if (map->getPlayer()->canMoveUp()) map->getPlayer()->moveUP();
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))
+    {
+        if (map->getPlayer()->canMoveDown()) map->getPlayer()->moveDown();
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
+    {
+        if (map->getPlayer()->canMoveLeft()) map->getPlayer()->moveLeft();
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
+    {
+        if (map->getPlayer()->canMoveRight()) map->getPlayer()->moveRight();
+    }
+    
 }
 
 void Game::render() {
@@ -39,8 +72,15 @@ void Game::render() {
             window.draw(*sp);
         }
     }
+
     for (auto monster: map->getMonsters()){
         window.draw(*monster->getSprite());
     }
+
+    window.draw(*map->getPlayer()->getSprite());
     window.display();
+}
+
+Map* Game::getMap(){
+    return map;
 }

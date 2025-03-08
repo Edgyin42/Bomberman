@@ -10,6 +10,11 @@ const int MAP_WIDTH = 25;
 const int MAP_HEIGHT = 15; 
 const int BLOCK_WIDTH = 16; // On the spritesheet
 
+
+
+/// One more thing to add if later we have time is to make the player touch the wall by decreaing the BLOCK_WIDTH in "player.cpp"
+// sf::IntRect rect({BLOCK_WIDTH*bombermanData.at(bomberman::walkingDown1)[0], BLOCK_WIDTH*bombermanData.at(bomberman::walkingDown1)[1]}, {""""BLOCK_WIDTH"""" ", BLOCK_WIDTH});  
+
 enum blockType{
     portal,
     brick,  
@@ -60,12 +65,12 @@ const std::map<bomberman, std::vector<int>> bombermanData = {
     {bomberman::walkingDown1,   {2, 0}}, 
     {bomberman::walkingDown2,   {2, 1}}, 
     {bomberman::walkingDown3,   {2, 2}}, 
-    {bomberman::walkingLeft1,  {1, 0}},
-    {bomberman::walkingLeft2,  {1, 1}},
-    {bomberman::walkingLeft3,  {1, 2}},
-    {bomberman::walkingRight1, {3, 0}},
-    {bomberman::walkingRight2, {3, 1}},
-    {bomberman::walkingRight3, {3, 2}},
+    {bomberman::walkingLeft1,  {3, 0}},
+    {bomberman::walkingLeft2,  {3, 1}},
+    {bomberman::walkingLeft3,  {3, 2}},
+    {bomberman::walkingRight1, {1, 0}},
+    {bomberman::walkingRight2, {1, 1}},
+    {bomberman::walkingRight3, {1, 2}},
     {bomberman::dying1,     {4, 2}},
     {bomberman::dying2,     {5, 2}},
     {bomberman::dying3,     {6, 2}}
