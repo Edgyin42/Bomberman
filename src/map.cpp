@@ -102,8 +102,10 @@ vector<Character*> Map::getMonsters (){
 };
 
 void Map::addMonster(){
-Character *character = new Oneal(this, 32., 32., OnealType::OnealHorizontal, 1.);
-  this->monsters.push_back(character);
+  Character *character1 = new Oneal(this, 32., 32., OnealType::OnealHorizontal, 16);
+  Character *character2 = new Oneal(this, 32., 64., OnealType::OnealVertical, 16);
+  this->monsters.push_back(character1);
+  this->monsters.push_back(character2);
 }
 
 Character* Map::getPlayer(){
@@ -153,8 +155,6 @@ bool Map::canMove(Character *Character, Direction direction) const {
   int endCol = floor(rightX / 32);
   int startRow = floor(topY / 32);
   int endRow = floor(bottomY / 32);
-
-  cout << "check :" <<  startCol << " " << endCol << " " << startRow << " " << endRow << endl;
   
   // Check each potentially overlapping cell
   for (int row = startRow; row <= endRow; row++) {

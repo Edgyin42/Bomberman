@@ -55,31 +55,50 @@ void Oneal::swapUp(){
 
 
 void Oneal::move(){
+    static Direction currentDirection = Direction::LEFT; // Add static variable to remember direction
+    
     if (type == OnealType::OnealHorizontal){
-        bool moveLeftCheck = map->canMove(this, Direction::LEFT);
-        bool moveRightCheck = map->canMove(this, Direction::RIGHT);
-        // cout << position.x << " " << position.y << endl;
-        // cout << moveLeftCheck << " " << moveRightCheck << endl;
-        // if (moveLeftCheck && !moveRightCheck || moveLeftCheck && moveRightCheck ){
-        if (moveLeftCheck){
-            moveLeft();
-            // cout << "enter1" << endl;
-        } else {
-            moveRight();
-            // cout << "enter2" << endl;
+        bool canMoveInCurrentDirection;
+        
+        // Check if we can move in current direction
+        if (currentDirection == Direction::LEFT) {
+            canMoveInCurrentDirection = map->canMove(this, Direction::LEFT);
+            
+            if (canMoveInCurrentDirection) {
+                moveLeft();
+            } else {
+                // Change direction if we hit a wall
+                currentDirection = Direction::RIGHT;
+                moveRight();
+            }
+        } else { // currentDirection == Direction::RIGHT
+            canMoveInCurrentDirection = map->canMove(this, Direction::RIGHT);
+            
+            if (canMoveInCurrentDirection) {
+                moveRight();
+            } else {
+                // Change direction if we hit a wall
+                currentDirection = Direction::LEFT;
+                moveLeft();
+            }
         }
-    } else {
-        bool moveUpCheck = map->canMove(this, Direction::UP);
-        bool moveDownCheck = map->canMove(this, Direction::DOWN);
-        // cout << position.x << " " << position.y << endl;
-        // cout << moveLeftCheck << " " << moveRightCheck << endl;
-        // if (moveLeftCheck && !moveRightCheck || moveLeftCheck && moveRightCheck ){
-        if (moveUpCheck){
-            moveUp();
-            // cout << "enter1" << endl;
-        } else {
-            moveDown();
-            // cout << "enter2" << endl;
+    } else { // OnealVertical
+        static Direction verticalDirection = Direction::UP; // Add static variable for vertical direction
+        
+        if (verticalDirection == Direction::UP) {
+            if (map->canMove(this, Direction::UP)) {
+                moveUp();
+            } else {
+                verticalDirection = Direction::DOWN;
+                moveDown();
+            }
+        } else { // verticalDirection == Direction::DOWN
+            if (map->canMove(this, Direction::DOWN)) {
+                moveDown();
+            } else {
+                verticalDirection = Direction::UP;
+                moveUp();
+            }
         }
     }
 }
