@@ -65,13 +65,11 @@ void Map::matchTheBlock(int levelNumber){
               type = blockType::wall;
               // Do I need to change it to float?
               sf::IntRect* blockWall = new sf::IntRect({32*j, 32*i}, {BLOCK_WIDTH, BLOCK_WIDTH});
-              hiddenBlock.insert(blockWall);
               break;
             }
             case 3: {
               type = blockType::brick;
               sf::IntRect* blockWall = new sf::IntRect({32*j, 32*i}, {BLOCK_WIDTH, BLOCK_WIDTH});
-              hiddenBlock.insert(blockWall);
               break;
             }
             default: {
@@ -111,5 +109,65 @@ Character *character = new Oneal(this, 32., 32., OnealType::OnealHorizontal, 1.)
 Character* Map::getPlayer(){
   return this->mainPlayer;
 };
+
+bool Map::isValidPosition(int row, int col) const{  
+  return row >= 0 && row < MAP_WIDTH && col >= 0 && col < MAP_HEIGHT;
+}
+
+bool Map::canMove(Character *Character, Direction direction) const {
+  float currentX = Character->getPosition().x;
+  float currentY = Character->getPosition().y;
+  
+  // Character dimensions (assuming the character has a hitbox)
+  float charWidth = 16;
+  float charHeight = 16;
+  
+  // Calculate new position based on direction and movement speed
+  float speed = Character->getSpeed();
+  float newX = currentX;
+  float newY = currentY;
+  
+  switch (direction) {
+    case Direction::UP:
+      newY -= speed;
+      break;
+    case Direction::RIGHT:
+      newX += speed;
+      break;
+    case Direction::DOWN:
+      newY += speed;
+      break;
+    case Direction::LEFT:
+      newX -= speed;
+      break;
+  }
+  
+  // Calculate character hitbox in the new position
+  float leftX = newX;
+  float rightX = newX + charWidth;
+  float topY = newY;
+  float bottomY = newY + charHeight;
+  
+  // Check collision with walls by examining all cells the character would overlap with
+  int startCol = floor(leftX / 32);
+  int endCol = floor(rightX / 32);
+  int startRow = floor(topY / 32);
+  int endRow = floor(bottomY / 32);
+
+  cout << "check :" <<  startCol << " " << endCol << " " << startRow << " " << endRow << endl;
+  
+  // Check each potentially overlapping cell
+  for (int row = startRow; row <= endRow; row++) {
+    for (int col = startCol; col <= endCol; col++) {
+      if (!isValidPosition(row, col) || grid[row][col] != 0) {
+        // Wall collision detected
+        return false;
+      }
+    }
+  }
+  
+  // No collision detected
+  return true;
+}
 
 Map::~Map(){}; 

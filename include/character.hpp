@@ -25,19 +25,20 @@ class Character{
         sf::Vector2<float> getPosition();
         void setPosition(sf::Vector2<float> pos);
         sf::Sprite *getSprite();
+        float getSpeed();
 
         bool canMoveUp();
         bool canMoveDown();
         bool canMoveLeft();
         bool canMoveRight();
 
-        void moveUP();
+        void moveUp();
         void moveDown();
         void moveLeft();
         void moveRight();
 
         virtual void move(){};
-
+    
 
         virtual void swapUp() = 0; 
         virtual void swapDown(){}; 

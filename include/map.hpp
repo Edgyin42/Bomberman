@@ -17,11 +17,16 @@ class Map{
     int level;
     vector<vector<sf::Sprite *> > blocks;
     vector<Character*> monsters;
-    
     Character *mainPlayer;
+    bool isValidPosition(int row, int col) const; 
+
+
+    // bool canMoveTo(int row, int col) const; 
+
     
     
     public: 
+    bool canMove(Character *Character, Direction direction) const; 
     Map(); 
     Map(int _level);
     void matchTheBlock(int level); 
@@ -29,7 +34,6 @@ class Map{
     vector<Character*> getMonsters();
     vector<vector<int> > grid;
     Character *getPlayer();
-    unordered_set<sf::IntRect*> hiddenBlock; 
     void addMonster();
     ~Map(); 
 };

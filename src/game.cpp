@@ -48,19 +48,19 @@ void Game::update() {
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
     { 
-        if (map->getPlayer()->canMoveUp()) map->getPlayer()->moveUP();
+        if (map->canMove(map->getPlayer(), Direction::UP)) map->getPlayer()->moveUp();
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))
     {
-        if (map->getPlayer()->canMoveDown()) map->getPlayer()->moveDown();
+        if (map->canMove(map->getPlayer(), Direction::DOWN)) map->getPlayer()->moveDown();
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
     {
-        if (map->getPlayer()->canMoveLeft()) map->getPlayer()->moveLeft();
+        if (map->canMove(map->getPlayer(), Direction::LEFT)) map->getPlayer()->moveLeft();
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
     {
-        if (map->getPlayer()->canMoveRight()) map->getPlayer()->moveRight();
+        if (map->canMove(map->getPlayer(), Direction::RIGHT)) map->getPlayer()->moveRight();
     }
     
 }

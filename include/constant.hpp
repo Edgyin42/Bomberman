@@ -10,10 +10,24 @@ const int MAP_WIDTH = 25;
 const int MAP_HEIGHT = 15; 
 const int BLOCK_WIDTH = 16; // On the spritesheet
 
+const int SPRITE_WIDTH = 32;
 
 
 /// One more thing to add if later we have time is to make the player touch the wall by decreaing the BLOCK_WIDTH in "player.cpp"
 // sf::IntRect rect({BLOCK_WIDTH*bombermanData.at(bomberman::walkingDown1)[0], BLOCK_WIDTH*bombermanData.at(bomberman::walkingDown1)[1]}, {""""BLOCK_WIDTH"""" ", BLOCK_WIDTH});  
+
+// const std::pair<int, int> DIRECTIONS[4] = {
+//     {-1, 0}, {0, 1}, {1, 0}, {0, -1}
+// };
+
+
+enum Direction {
+    UP,
+    RIGHT,
+    DOWN,
+    LEFT
+};
+
 
 enum blockType{
     portal,
@@ -21,6 +35,7 @@ enum blockType{
     wall,
     grass, 
 }; 
+
 
 enum bomberman {
     walkingUp1, 

@@ -52,9 +52,15 @@ void Character::setPosition(sf::Vector2<float> pos){
     this->position = pos;
 }
 
+
+
 bool Character::canMoveUp(){
+
+    // for (const auto& dir : DIRECTIONS) {
+    //     castRay(bombRow, bombCol, dir.first, dir.second, explosionRange);
+    // }
     int block_x = floor(position.x / 32);
-    int block_y = floor(position.y / 32) - 1;
+    int block_y = ceil(position.y / 32) - 1;
     cout << "block " << block_y << " " << block_x << endl; 
     if (this->map->grid[block_y][block_x] == 0) return true; 
     return false;
@@ -63,7 +69,7 @@ bool Character::canMoveUp(){
 bool Character::canMoveDown(){
     
     int block_x = floor(position.x / 32);
-    int block_y = floor((position.y + 32) / 32);;
+    int block_y = floor(position.y/ 32) + 1;;
     cout << "block " << block_y << " " << block_x << endl; 
     if (this->map->grid[block_y][block_x] == 0) return true; 
     return false;
@@ -71,7 +77,7 @@ bool Character::canMoveDown(){
 
 bool Character::canMoveLeft(){
     cout << "position " << position.y << " " << position.x << endl; 
-    int block_x = floor(position.x / 32) - 1;
+    int block_x = ceil(position.x / 32) - 1;
     int block_y = floor(position.y / 32);
     cout << "block " << block_y << " " << block_x << endl; 
     if (this->map->grid[block_y][block_x] == 0) return true; 
@@ -79,15 +85,47 @@ bool Character::canMoveLeft(){
 };
 
 bool Character::canMoveRight(){
-    int block_x = ceil(position.x / 32) + 1;
+    int block_x = floor(position.x / 32) + 1;
     int block_y = floor(position.y / 32);
     cout << "block " << block_y << " " << block_x << endl; 
     if (this->map->grid[block_y][block_x] == 0) return true; 
     return false;
 };
 
+// bool Character::canMoveUp(){
+//     // Check if character can move up by checking the grid cell above
+//     int block_x = floor(position.x / 32);
+//     int block_y = ceil(position.y / 32) - 1);
+    
+//     return this->map->grid[block_y][block_x] == 0;
+// }
 
-void Character::moveUP(){
+// bool Character::canMoveDown(){
+//     // Check if character can move down by checking the grid cell below
+//     int block_x = floor(position.x / 32);
+//     int block_y = floor(position.y / 32 + 1);
+    
+//     return this->map->grid[block_y][block_x] == 0;
+// }
+
+// bool Character::canMoveLeft(){
+//     // Check if character can move left by checking the grid cell to the left
+//     int block_x = floor(position.x / 32 - 1);
+//     int block_y = floor(position.y / 32);
+    
+//     return this->map->grid[block_y][block_x] == 0;
+// }
+
+// bool Character::canMoveRight(){
+//     // Check if character can move right by checking the grid cell to the right
+//     int block_x = floor(position.x / 32  + 1);
+//     int block_y = floor(position.y / 32);
+    
+//     return this->map->grid[block_y][block_x] == 0;
+// }
+
+
+void Character::moveUp(){
     position.y -= speed;
     swapUp();
     sprite->setPosition(position);
@@ -113,3 +151,6 @@ void Character::moveRight(){
 
 
 
+float Character::getSpeed(){
+    return speed;
+}

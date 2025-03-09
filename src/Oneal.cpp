@@ -56,23 +56,30 @@ void Oneal::swapUp(){
 
 void Oneal::move(){
     if (type == OnealType::OnealHorizontal){
-        bool moveLeftCheck = canMoveLeft();
-        bool moveRightCheck = canMoveRight();
+        bool moveLeftCheck = map->canMove(this, Direction::LEFT);
+        bool moveRightCheck = map->canMove(this, Direction::RIGHT);
         // cout << position.x << " " << position.y << endl;
-        cout << moveLeftCheck << " " << moveRightCheck << endl;
+        // cout << moveLeftCheck << " " << moveRightCheck << endl;
         // if (moveLeftCheck && !moveRightCheck || moveLeftCheck && moveRightCheck ){
         if (moveLeftCheck){
             moveLeft();
-            cout << "enter1" << endl;
+            // cout << "enter1" << endl;
         } else {
             moveRight();
-            cout << "enter2" << endl;
+            // cout << "enter2" << endl;
         }
     } else {
-        if (canMoveUp()){
-            moveUP();
-        } else if (canMoveDown()){
+        bool moveUpCheck = map->canMove(this, Direction::UP);
+        bool moveDownCheck = map->canMove(this, Direction::DOWN);
+        // cout << position.x << " " << position.y << endl;
+        // cout << moveLeftCheck << " " << moveRightCheck << endl;
+        // if (moveLeftCheck && !moveRightCheck || moveLeftCheck && moveRightCheck ){
+        if (moveUpCheck){
+            moveUp();
+            // cout << "enter1" << endl;
+        } else {
             moveDown();
-        } 
+            // cout << "enter2" << endl;
+        }
     }
 }
